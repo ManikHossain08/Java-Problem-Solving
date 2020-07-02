@@ -42,7 +42,10 @@ public class BinarySearch {
 					System.out.print(" 1");
 				first = middle + 1;
 			} else if (sortedNumber[middle] == item) {
-				System.out.print(" found");
+				if (iterator == 1)
+					System.out.print("found");
+				else
+					System.out.print(" found");
 				break;
 			} else {
 				if (iterator == 1)
@@ -54,8 +57,13 @@ public class BinarySearch {
 			middle = (first + last) / 2;
 			iterator++;
 		}
-		if (first > last)
-			System.out.print(" notfound");
+
+		if (first > last) {
+			if (iterator == 1)
+				System.out.print("notfound");
+			else
+				System.out.print(" notfound");
+		}
 
 	}
 }
