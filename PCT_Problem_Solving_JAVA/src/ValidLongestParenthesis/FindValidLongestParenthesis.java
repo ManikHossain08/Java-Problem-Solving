@@ -4,15 +4,15 @@ import java.util.Scanner;
 
 public class FindValidLongestParenthesis {
 	public static void main(String args[]) {
-
+		// Online problem link: https://leetcode.com/problems/longest-valid-parentheses/
 		Scanner sc_in = new Scanner(System.in);
-		String inputStr = sc_in.nextLine();
-		
+		String inputStr = sc_in.nextLine(); // ")()())"
+
 		System.out.print(longestValidParentheses(inputStr));
 		sc_in.close();
 	}
 
-	// Important:
+	// Another Important:
 	// https://www.geeksforgeeks.org/median-two-sorted-arrays-different-sizes-ologminn-m/
 	public static int longestValidParentheses(String s) {
 		int count = 0;
