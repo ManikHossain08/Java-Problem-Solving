@@ -4,7 +4,8 @@ import java.util.HashMap;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class Bracketmatching {
+// BASIC PROGRAMMING
+public class BracketMatching {
 
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
@@ -15,7 +16,7 @@ public class Bracketmatching {
 		}
 		sc.close();
 		for (String s : inputArr) {
-			System.out.println(findbracketMatching(s) ? "TRUE" : "FALSE");
+			System.out.print(findbracketMatching(s) ? "TRUE" : "FALSE");
 		}
 	}
 
