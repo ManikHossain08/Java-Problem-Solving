@@ -12,7 +12,7 @@ public class EditDistance {
 		Scanner sc = new Scanner(System.in);
 		String str1 = sc.nextLine();
 		String str2 = sc.nextLine();
-
+		// this is also called dynamic programming
 		System.out.print(findMinEditDistance(str1, str2));
 
 		sc.close();
