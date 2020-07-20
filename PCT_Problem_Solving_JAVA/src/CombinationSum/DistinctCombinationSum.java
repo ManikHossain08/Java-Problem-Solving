@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class DistinctCombinationSum {
 	public static void main(String args[]) {
 		//**** source of Code: https://gist.github.com/wayetan/8215995
-		
+		// NOTE: did not understand properly
 		Scanner scan = new Scanner(System.in);
 		int targetSum = scan.nextInt();
 		int numofElement = scan.nextInt();
