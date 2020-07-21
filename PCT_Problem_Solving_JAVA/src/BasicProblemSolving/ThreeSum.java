@@ -21,6 +21,8 @@ public class ThreeSum {
 
 	private static List<List<Integer>> find3SumSolution(int[] arrInput) {
 		List<List<Integer>> res = new ArrayList<List<Integer>>();
+		//Arrays.sort(num);
+		//List<List<Integer>> res = new LinkedList<>(); 
 		boolean isDup = false;
 		String left = "", right = "";
 		for (int i = 0; i < arrInput.length; i++) {
