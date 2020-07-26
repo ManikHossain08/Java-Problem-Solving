@@ -49,6 +49,5 @@ public class RegularExpressionMatching {
 		}
 
 		return table2d[s1.length()][s2.length()];
-
 	}
 }
