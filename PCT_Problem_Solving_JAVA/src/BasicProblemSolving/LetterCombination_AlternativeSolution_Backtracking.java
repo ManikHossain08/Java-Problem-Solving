@@ -12,6 +12,7 @@ public class LetterCombination_AlternativeSolution_Backtracking {
 	private static String digits;
 
 	public static void main(String args[]) {
+		// https://leetcode.com/problems/letter-combinations-of-a-phone-number/discuss/8403/*Java*-very-straightforward-iterative-solution-(1ms)
 		Scanner sc = new Scanner(System.in);
 		digits = sc.nextLine();
 
@@ -33,6 +34,7 @@ public class LetterCombination_AlternativeSolution_Backtracking {
 			return;
 		}
 		// Note: THIS COMMENTED CODE IS ASSOCIATED WITH COMMNETED ARRAY IN THE TOP LINE
+		
 		// String str = chars[digits.charAt(index) - '0'];
 		// for (char c : str.toCharArray()) {
 		
