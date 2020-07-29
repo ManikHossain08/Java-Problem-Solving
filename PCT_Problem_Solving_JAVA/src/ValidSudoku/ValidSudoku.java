@@ -98,15 +98,6 @@ public class ValidSudoku {
 		}
 		
 		
-//		for (int i = 0; i < tempTable.length; i++) {
-//			for (int j = 0; j < tempTable[0].length; j++) {
-//				String value = arrInp[i][j];
-//				if (!value.equals("."))
-//					validityArr[value.charAt(0) - '0']++;
-//			}
-//		}
-		
-		
 		return isvalid;
 	}
 
