@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class GenerateParentheses {
+public class GenerateParentheses_Backtracking {
 	public static void main(String args[]) {
 		// Backtracking is a DFS search: https://www.youtube.com/watch?v=DKCbsiDBN6c
 		// Brunch and bound is BFS search: https://www.youtube.com/watch?v=DKCbsiDBN6c
@@ -25,9 +25,9 @@ public class GenerateParentheses {
 		// Means closing bracket already put indicate invalid format and it excluded from list.
 		if (left > right) 
 			return;
-		if (left == 0 && right == 0) {
+		if (left == 0 && right == 0) { // consider 0 as Target
 			res.add(s);
-			return;
+			return; // return is not big deal here it will show same o/p without return;
 		}
 
 		// "left" or "right" means how many left or right parentheses could be used here

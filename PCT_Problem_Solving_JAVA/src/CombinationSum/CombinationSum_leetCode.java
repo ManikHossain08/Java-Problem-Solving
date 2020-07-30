@@ -20,7 +20,7 @@ public class CombinationSum_leetCode {
 		System.out.print(findSumCOmbination(arrInp, target));
 		sc.close();
 	}
-
+	// Note: for using this first for loop is the the number should be repeat as much as many times.
 	private static List<List<Integer>> findSumCOmbination(int[] candidates, int target) {
 		Arrays.sort(candidates);
 		List<List<Integer>> result = new ArrayList<>();
