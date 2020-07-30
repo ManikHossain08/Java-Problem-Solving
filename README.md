@@ -1,1 +1,1 @@
-# Java-Problem-Solving-PCT
+# Java-Problem-Solving
