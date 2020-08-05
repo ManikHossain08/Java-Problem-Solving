@@ -2,7 +2,7 @@ package BasicProblemSolving;
 
 import java.util.Scanner;
 
-public class JumpGame {
+public class JumpGame_Backtracking {
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
 		int elemNum = sc.nextInt();
