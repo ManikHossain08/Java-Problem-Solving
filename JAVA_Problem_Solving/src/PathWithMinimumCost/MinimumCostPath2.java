@@ -5,8 +5,16 @@ import java.util.Scanner;
 
 public class MinimumCostPath2 {
 
-	//Problem Statement: https://www.geeksforgeeks.org/min-cost-path-dp-6/
-	/* Driver program to test above functions */
+	// Problem Statement: https://www.geeksforgeeks.org/min-cost-path-dp-6/
+	/* Driver program to test above functions 
+	 * 
+	 You can only traverse DOWN, RIGHT AND DIAGONALLY lower cells from a given
+	 cell, i.e., from a given cell (i, j), cells (i+1, j), (i, j+1) and (i+1, j+1)
+	 can be traversed
+	 * 
+	 * */
+	
+	
 	public static void main(String args[]) {
 
 		Scanner scan = new Scanner(System.in);
@@ -40,12 +48,11 @@ public class MinimumCostPath2 {
 
 		/* Initialize FIRST ROW (i=0) of tc array */
 		for (j = 1; j <= n; j++)
-			tc[0][j] = tc[0][j - 1] + cost[0][j]; 
-		
+			tc[0][j] = tc[0][j - 1] + cost[0][j];
+
 		/* Initialize FIRST COLUMN (j=0) of total cost(tc) array */
 		for (i = 1; i <= m; i++)
 			tc[i][0] = tc[i - 1][0] + cost[i][0];
-
 
 		/* Construct rest of the tc array */
 		for (i = 1; i <= m; i++)
