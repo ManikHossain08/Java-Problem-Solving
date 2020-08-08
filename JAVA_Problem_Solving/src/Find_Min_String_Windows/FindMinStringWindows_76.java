@@ -3,7 +3,7 @@ package Find_Min_String_Windows;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class FindMinStringWindows {
+public class FindMinStringWindows_76 {
 	public static void main(String args[]) {
 		Scanner input = new Scanner(System.in);
 		String inputStr = input.nextLine();
