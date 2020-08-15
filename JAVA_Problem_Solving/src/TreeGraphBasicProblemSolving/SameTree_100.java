@@ -7,6 +7,7 @@ class TreeNode {
 	int val;
 	TreeNode left;
 	TreeNode right;
+	TreeNode(){}
 	TreeNode(int value){
 		this.val = value;
 	}
