@@ -15,13 +15,16 @@ public class InvertTree_226 {
 		root.left = new TreeNode(2);
 		root.right = new TreeNode(3); // or 3 for not symmetric
 
+		/*
+		 * Generated tree: symmetric 1 / \ 2 3
+		 */
+
 		// check mirror view is same or not after reversing
 		System.out.print(findInvertTreeNode(root));
 
 		sc.close();
 	}
 
-	// this TreeNode indicate the one tree.
 	private static TreeNode findInvertTreeNode(TreeNode tree) {
 		if (tree == null)
 			return null;
