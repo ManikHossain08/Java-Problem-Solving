@@ -41,9 +41,6 @@ public class SymmetricTree_101 {
 		if (p == null || q == null)
 			return false;
 
-		if (p.left != q.right || p.right != q.left)
-			return false;
-
 		if (p != null && q != null) {
 			return (p.val == q.val && isSameTree(p.left, q.right) && isSameTree(p.right, q.left));
 		}
