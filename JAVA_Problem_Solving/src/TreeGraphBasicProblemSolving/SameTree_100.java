@@ -3,15 +3,15 @@ package TreeGraphBasicProblemSolving;
 import java.util.Scanner;
 
 
-class TreeNode {
-	int val;
-	TreeNode left;
-	TreeNode right;
-	TreeNode(){}
-	TreeNode(int value){
-		this.val = value;
-	}
-}
+//class TreeNode {
+//	int val;
+//	TreeNode left;
+//	TreeNode right;
+//	TreeNode(){}
+//	TreeNode(int value){
+//		this.val = value;
+//	}
+//}
 
 
 public class SameTree_100 {
