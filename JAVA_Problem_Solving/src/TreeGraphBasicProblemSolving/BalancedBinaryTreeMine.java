@@ -1,21 +1,7 @@
 package TreeGraphBasicProblemSolving;
 
-
-class TreeNode {
-      int val;
-       TreeNode left;
-       TreeNode right;
-       TreeNode() {}
-       TreeNode(int val) { this.val = val; }
-       TreeNode(int val, TreeNode left, TreeNode right) {
-           this.val = val;
-           this.left = left;
-           this.right = right;
-       }
-   }
-
-
-public class BalancedBinaryTree {
+public class BalancedBinaryTreeMine {
+	// passed 300/343 cases 
 	public static void main(String args[]) {
 
 		TreeNode root = new TreeNode(3);
@@ -54,28 +40,7 @@ public class BalancedBinaryTree {
 	}
 
 	private static boolean isBalancedBinaryTree(TreeNode root) {
-		if(root == null) return true;
-		int leftDepth = 0, rightDepth = 0;
-		if (root.left != null) leftDepth = findMaxDepth(root.left);
-		if (root.right != null) rightDepth = findMaxDepth(root.right);
-
-		return Math.abs(leftDepth - rightDepth) <= 1;
-	}
-
-	// this TreeNode indicate the one tree (left or right tree).
-	public static int findMaxDepth(TreeNode root) {
-		if ((root == null))
-			return 0;
-
-		if (root.left == null && root.right == null)
-			return 1;
-		return 1 + Math.max(findMaxDepth(root.left), findMaxDepth(root.right));
-	}
-}
-
-/*
- * 
- if (root == null)
+		if (root == null)
 			return true;
 		return findMaxDepth(root) != -1;
 	}
@@ -95,4 +60,5 @@ public class BalancedBinaryTree {
 
 		return 1 + Math.max(leftDepth, rightDepth);
 	}
-*/
+}
+

@@ -2,7 +2,7 @@ package TreeGraphBasicProblemSolving;
 
 import java.util.Scanner;
 
-
+// see BalancedbinaryTree.java class for this TreeNode definition
 //class TreeNode {
 //	int val;
 //	TreeNode left;
