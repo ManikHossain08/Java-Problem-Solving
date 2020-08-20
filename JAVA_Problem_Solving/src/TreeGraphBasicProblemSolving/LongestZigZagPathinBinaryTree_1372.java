@@ -16,19 +16,22 @@ public class LongestZigZagPathinBinaryTree_1372 {
 
 		// Input: root = [1,1,1,null,1,null,null,1,1,null,1]
 		// Output: 4
-
+		
+		// SOLUTION-1
+		System.out.print(longestZigZag(root1));
+		// SOLUTION-2
 		System.out.print(longestZigZag1(root1));
 
 	}
 
 	// SOLUTION-1: this piece of code is really easy
-	public static int longestZigZag1(TreeNode root) {
+	public static int longestZigZag(TreeNode root) {
         if (root == null) return 0;
         dfs(root.left, 1, true);
         dfs(root.right, 1, false);
         return result;
     }
-    // this pie
+ 
     private static void dfs(TreeNode node, int depthCounter, boolean isLeftAlreadyVisit) {
         if (node == null) return;
         result = Math.max(result, depthCounter);
@@ -39,12 +42,11 @@ public class LongestZigZagPathinBinaryTree_1372 {
 	
     
  // SOLUTION-2: This piece of code is little bit difficult to understand
-    private static int longestZigZag(TreeNode root) {
+    private static int longestZigZag1(TreeNode root) {
 
 		if (root == null)
 			return result;
 		findZigzag(root);
-
 		return result-1;
 	}
 
