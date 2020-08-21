@@ -6,11 +6,12 @@ import java.util.List;
 import java.util.Scanner;
 
 public class AlternativeSolutionUsingDFS {
-	
+
 	private static int lines = 0;
 	private static String[][] blocks2D;
 	private static List<String> result = new ArrayList<String>();
 	private static List<String> ALLCOMBINATION = new ArrayList<String>();
+
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
 		lines = sc.nextInt();
@@ -22,9 +23,9 @@ public class AlternativeSolutionUsingDFS {
 			blocks2D[i] = sc.nextLine().split(",");
 		}
 		String targetStr = sc.nextLine();
-		
+
 		ArrayList<String> allRotatedTargetString = getrotatedTargetString(targetStr);
-		
+
 		findCombinationsDFS(new ArrayList<String>(), 0);
 
 		for (int i = 0; i < result.size(); i = i + lines) {
@@ -33,7 +34,7 @@ public class AlternativeSolutionUsingDFS {
 				String value = result.get(i + j);
 				remaining.add(value);
 			}
-			
+
 			ArrayList<String> singleCobination = new ArrayList<String>();
 			getAllCombination("", remaining, singleCobination);
 
@@ -46,7 +47,8 @@ public class AlternativeSolutionUsingDFS {
 
 		sc.close();
 	}
-	// reverse string 
+
+	// reverse string
 	private static ArrayList<String> getrotatedTargetString(String targetStr) {
 		ArrayList<String> targetColl = new ArrayList<String>();
 		int strLen = targetStr.length();
@@ -79,17 +81,17 @@ public class AlternativeSolutionUsingDFS {
 	// *** Important: remember this code for permutation that meant combination of
 	// several words and make different string
 	private static void getAllCombination(String selected, List<String> remaining, ArrayList<String> permutations) {
-		int numRemaining = remaining.size();
-		if (numRemaining == 0)
+		// int numRemaining = remaining.size();
+		if (remaining.size() == 0)
 			permutations.add(selected);
-		else {
-			for (int i = 0; i < numRemaining; i++) {
-				String newSelected = selected + remaining.get(i);
-				ArrayList<String> newRemaining = new ArrayList<>(remaining);
-				newRemaining.remove(i);
-				getAllCombination(newSelected, newRemaining, permutations);
-			}
+
+		for (int i = 0; i < remaining.size(); i++) {
+			String newSelected = selected + remaining.get(i);
+			ArrayList<String> newRemaining = new ArrayList<>(remaining);
+			newRemaining.remove(i);
+			getAllCombination(newSelected, newRemaining, permutations);
 		}
+
 	}
 
 	private static void findAccetpedMatchedString(List<String> combinations, ArrayList<String> allRotatedTargetString) {
