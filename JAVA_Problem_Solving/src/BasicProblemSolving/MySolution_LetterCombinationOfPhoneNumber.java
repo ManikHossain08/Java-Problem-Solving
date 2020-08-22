@@ -34,7 +34,8 @@ public class MySolution_LetterCombinationOfPhoneNumber {
 			 result.add(Combination);
 			 return null;
 		}
-		String getLetter = letters[Integer.parseInt(digits.charAt(indeex) + "")];
+		//String getLetter = letters[Integer.parseInt(digits.charAt(indeex) + "")];
+		String getLetter = letters[digits.charAt(indeex) - '0'];
 		for (int j = 0; j < getLetter.length(); j++) {
 			findCombinations(digits, Combination + getLetter.charAt(j) + "", indeex + 1);
 		}

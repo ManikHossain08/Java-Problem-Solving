@@ -22,6 +22,7 @@ public class possibleStringCombinationByTargetStr {
 		ArrayList<String> allRotatedTargetString = getrotatedTargetString(targetStr);
 
 		ArrayList<String> combinations = findCombinations(blocks2D, numBlocksPerLine);
+		System.out.println(combinations);
 		ArrayList<String> acceptedCombinations = new ArrayList<String>();
 		for (int i = 0; i < combinations.size(); i++) {
 			String combination = combinations.get(i);

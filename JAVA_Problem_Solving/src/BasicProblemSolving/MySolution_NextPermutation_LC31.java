@@ -72,7 +72,7 @@ public class MySolution_NextPermutation_LC31 {
 	private static int[] getCommaSeperatedString(String element) {
 		int[] result = new int[element.length()];
 		for (int i = 0; i < element.length(); i++) {
-			result[i] = Integer.parseInt(element.charAt(i) + "");
+			result[i] = element.charAt(i)-'0';
 		}
 		return result;
 	}

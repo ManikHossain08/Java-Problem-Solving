@@ -24,13 +24,13 @@ public class LetterCombination_AlternativeSolution_Backtracking {
 		List<String> result = new ArrayList<String>();
 		if (digits == null || digits.length() == 0)
 			return result;
-		backtracking(result, new StringBuilder(), 0);
+		backtracking(result, "", 0);
 		return result;
 	}
 
-	public static void backtracking(List<String> result, StringBuilder sb, int index) {
+	public static void backtracking(List<String> result, String ss, int index) {
 		if (index == digits.length()) {
-			result.add(sb.toString());
+			result.add(ss.toString());
 			return;
 		}
 		// Note: THIS COMMENTED CODE IS ASSOCIATED WITH COMMNETED ARRAY IN THE TOP LINE
@@ -40,9 +40,22 @@ public class LetterCombination_AlternativeSolution_Backtracking {
 		
 		String[] strList = KEYS[digits.charAt(index) - '0'];
 		for (String s : strList) {
-			sb.append(s);
-			backtracking(result, sb, index + 1);
-			sb.setLength(sb.length() - s.length());
+			//sb.append(s);
+			backtracking(result, ss+s, index + 1);
+			//sb.setLength(sb.length() - s.length());
+			
+			/*
+			 * if we use StringBuilder or List for storing combination then we have to remove 
+			 * the last word from the list for second combination before adding to the final
+			 * result list... please see alternative solution of same problem.
+			 * 
+			 * Here String ss was StringBuilder so we had to remove this after the backtracking function
+			 * and clear the space for next combination.
+			 * 
+			 * If we uncomment the StringBuilder statement then this would be true.
+			 * 
+			 */
+			
 		}
 	}
 }
