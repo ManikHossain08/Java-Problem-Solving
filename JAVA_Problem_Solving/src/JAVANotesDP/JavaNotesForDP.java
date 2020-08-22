@@ -7,6 +7,7 @@ public class JavaNotesForDP {
 	
 	
 	// NOTE: for finding the combination from 2d array use this code 
+	// this 2 solutions works like cross join.
 	// Solution-1 : PHONE NUMBER LETTER COMBINATION
 	/*
 	 public static List<String> findCombinations(String digits, String Combination, int index) {
@@ -51,7 +52,7 @@ public class JavaNotesForDP {
 	
 	
 	// NOTE: for finding the combination from 1d array or list of words use this code 
-	
+	// This SOLUTION IS FOR GENERATE COMBINATION BETWEEN THE WORDS.
 	/*
 	 private static void getCombinationWithSlecetedWordList(String singleComb, List<String> wordList,
 			ArrayList<String> result) {
