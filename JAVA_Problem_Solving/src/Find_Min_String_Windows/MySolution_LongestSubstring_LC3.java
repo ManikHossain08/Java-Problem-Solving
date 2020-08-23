@@ -1,4 +1,4 @@
-package BasicProblemSolving;
+package Find_Min_String_Windows;
 
 import java.util.HashSet;
 import java.util.Scanner;
@@ -23,6 +23,9 @@ public class MySolution_LongestSubstring_LC3 {
 	r g
 	
 	 */
+	
+	// THIS CODE CONCEPT IS LITTLE BIT SIMILAR WITH MIN WINDOW SUBTRING 
+	// I USE THIS CODE CONCEPT FOR SOLVING THE MIN WINDOWS STRING
 	public static HashSet<Character> hash_set = new HashSet<Character>();
 
 	public static void main(String[] args) {
