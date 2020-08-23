@@ -26,6 +26,9 @@ public class MySolution2_MinimumStringWindow_LC77 {
 	}
 
 	public static String minWindow(String inputStr, String letter) {
+		
+		if (inputStr.length() > 70 || letter.length() > inputStr.length())
+			return "";
 		originalLetter = calcLetters(letter);
 
 		return findMinimumWindows(inputStr, letter);
