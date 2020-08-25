@@ -1,7 +1,15 @@
 package TreeGraphBasicProblemSolving;
 
 public class BalancedBinaryTreeMine_110 {
-	
+	/*
+	 THIS PROBLEM IS SIMILAR WITH AVL TREE MEANS
+	  
+	 AVL TREE: A binary search tree in which the heights of
+	 left and right sub-trees at every node differ
+	 by at most 1.
+	 
+	 And this problem also finding the height of each left and right subtree height.
+	*/
 	public static void main(String args[]) {
 
 		TreeNode root = new TreeNode(3);
