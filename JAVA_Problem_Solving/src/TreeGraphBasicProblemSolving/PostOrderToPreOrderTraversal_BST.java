@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 
-public class PostOrderToPreOrderTraversal {
+public class PostOrderToPreOrderTraversal_BST {
 	
 	public static List<Integer> preorder = new ArrayList<Integer>();
 	
@@ -23,12 +23,12 @@ public class PostOrderToPreOrderTraversal {
 		
 		preOrderTraversal(tree);
 		System.out.print(preorder);
+		inOrderTraversal(tree);
+		//System.out.print(preorder);
 		
 		sc.close();
 	}
-
 	
-
 	private static TreeNode constructTreeFromPostOrder(int value, TreeNode root) {
 		
 		if (root == null)
@@ -54,5 +54,18 @@ public class PostOrderToPreOrderTraversal {
 
 		return tree;
 	}
+	
+	
+	private static TreeNode inOrderTraversal(TreeNode tree) {
+		if (tree == null ) return null;
+		
+		inOrderTraversal(tree.left);
+		System.out.print(" "+tree.val );
+		inOrderTraversal(tree.right);
+
+		return tree;
+	}
 
 }
+
+// 1 2 3 4 5 6 7 8 9

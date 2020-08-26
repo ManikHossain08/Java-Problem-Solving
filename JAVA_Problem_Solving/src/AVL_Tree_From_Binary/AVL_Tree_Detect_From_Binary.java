@@ -68,23 +68,7 @@ public class AVL_Tree_Detect_From_Binary {
 
 	}
 
-	private static int checkIsAVL(TreeNode tree) {
-
-		if (tree == null)
-			return 0;
-
-		int leftDepth, rightDepth;
-		if ((leftDepth = checkIsAVL(tree.left)) == -1)
-			return -1;
-		if ((rightDepth = checkIsAVL(tree.right)) == -1)
-			return -1;
-
-		if (Math.abs(leftDepth - rightDepth) > 1)
-			return -1;
-
-		return 1 + Math.max(leftDepth, rightDepth);
-	}
-
+	
 	private static TreeNode generateByComaparingValue(int value, TreeNode root) {
 
 		if (root == null)
@@ -100,6 +84,23 @@ public class AVL_Tree_Detect_From_Binary {
 		}
 
 		return root;
+	}
+	
+	private static int checkIsAVL(TreeNode tree) {
+
+		if (tree == null)
+			return 0;
+
+		int leftDepth, rightDepth;
+		if ((leftDepth = checkIsAVL(tree.left)) == -1)
+			return -1;
+		if ((rightDepth = checkIsAVL(tree.right)) == -1)
+			return -1;
+
+		if (Math.abs(leftDepth - rightDepth) > 1)
+			return -1;
+
+		return 1 + Math.max(leftDepth, rightDepth);
 	}
 
 	private static List<Integer> preOrderTraveral(TreeNode root) {
