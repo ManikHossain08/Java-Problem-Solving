@@ -18,19 +18,22 @@ public class ConstructBSTBySortedArray_LC108 {
 	}
 
 	private static TreeNode sortedArrayToBST(int[] nums) {
-		if(nums.length == 0 || nums == null) return null;
-		int start = 0;
-		int end = nums.length-1;
-		return sortedArrayToBST(nums, start, end);
+		if (nums.length == 0 || nums == null)
+			return null;
+
+		return sortedArrayToBST(nums, 0, nums.length - 1);
 	}
 
 	private static TreeNode sortedArrayToBST(int[] nums, int start, int end) {
-		int middle = (start+end)/2;
 
+		if (start > end)
+			return null;
+
+		int middle = (start + end) / 2;
 		TreeNode tree = new TreeNode(nums[middle]);
-		
-		if(start < middle ) tree.left = sortedArrayToBST(nums, start, middle - 1);
-		if(middle < end ) tree.right = sortedArrayToBST(nums, middle + 1, end);
+
+		tree.left = sortedArrayToBST(nums, start, middle - 1);
+		tree.right = sortedArrayToBST(nums, middle + 1, end);
 
 		return tree;
 	}
