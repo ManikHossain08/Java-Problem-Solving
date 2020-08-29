@@ -2,7 +2,7 @@ package ValidLongestParenthesis;
 
 import java.util.Scanner;
 
-public class MySolution_ValidParenthesis_LC32 {
+public class MySolution_LongValidParenthesis_LC32 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String inputs = sc.nextLine();
