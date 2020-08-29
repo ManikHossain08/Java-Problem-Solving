@@ -1,4 +1,4 @@
-package UniqueWordCount;
+package UniqueWordCount_Basic;
 
 import java.util.HashSet;
 import java.util.Scanner;

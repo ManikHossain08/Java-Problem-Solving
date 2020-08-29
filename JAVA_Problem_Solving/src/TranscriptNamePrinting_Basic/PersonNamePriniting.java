@@ -1,4 +1,4 @@
-package TranscriptNamePrinting;
+package TranscriptNamePrinting_Basic;
 
 import java.util.Scanner;
 
