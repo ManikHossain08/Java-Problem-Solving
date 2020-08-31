@@ -17,11 +17,11 @@ public class MySolution_N_Gram {
 		Scanner sc = new Scanner(System.in);
 		int lineno = sc.nextInt();
 		sc.nextLine();
+		
 		String[] inputs = new String[lineno];
 		for (int i = 0; i < lineno; i++) {
 			inputs[i] = sc.nextLine();
 		}
-
 		int gramType = sc.nextInt();
 
 		System.out.print(findNGram(inputs, gramType));
@@ -38,8 +38,8 @@ public class MySolution_N_Gram {
 		case 1:
 			result = findUniGram(inputs, gramType);
 			break;
+			
 		case 2:
-
 			result = findBiGram(inputs, gramType);
 			break;
 
