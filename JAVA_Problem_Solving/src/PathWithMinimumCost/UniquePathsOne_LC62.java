@@ -1,4 +1,4 @@
-package BasicProblemSolving;
+package PathWithMinimumCost;
 
 import java.util.Scanner;
 
