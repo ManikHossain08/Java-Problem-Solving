@@ -3,7 +3,7 @@ package PathWithMinimumCost;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class MinimumCostPath2 {
+public class MinimumCostPath2_GeekForGeeks {
 
 	// Problem Statement: https://www.geeksforgeeks.org/min-cost-path-dp-6/
 	/* Driver program to test above functions 
