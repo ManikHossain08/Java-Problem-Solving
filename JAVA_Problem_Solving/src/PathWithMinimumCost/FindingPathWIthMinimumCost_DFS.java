@@ -2,9 +2,9 @@ package PathWithMinimumCost;
 
 import java.util.Scanner;
 
-public class FindingPathWIthMinimumCost {
+public class FindingPathWIthMinimumCost_DFS {
 	public static void main(String args[]) {
-		FindingPathWIthMinimumCost obj = new FindingPathWIthMinimumCost();
+		FindingPathWIthMinimumCost_DFS obj = new FindingPathWIthMinimumCost_DFS();
 
 		Scanner scan = new Scanner(System.in);
 		int numStations = Integer.parseInt(scan.nextLine());

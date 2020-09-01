@@ -7,7 +7,10 @@ import java.util.List;
 import java.util.Scanner;
 
 public class NextPermutation {
-	
+	// THIS IS NOT THE ACCEPTED SOLUTION FOR LEETCODE BECAUSE 213 / 265 test cases passed.
+	// inp = 4,2,0,2,3,2,0
+	// out = 4,2,0,3,0,2,2
+	// this inp, output did not worked.
 
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
@@ -71,7 +74,5 @@ public class NextPermutation {
 	}
 }
 
-// inp = 4,2,0,2,3,2,0
-// out = 4,2,0,3,0,2,2
-// this inp, output did not worked.
+
 

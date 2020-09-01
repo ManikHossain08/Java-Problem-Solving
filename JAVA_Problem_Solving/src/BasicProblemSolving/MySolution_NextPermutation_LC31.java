@@ -5,7 +5,10 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class MySolution_NextPermutation_LC31 {
-
+	
+	// THIS CODE IS NOT WORKING ON THE LEETCODE BUT ONLY WORKING ON THE LOCAL MACHINE 
+	// AND MATCHING ALL THE OUTPUT
+	
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
 		String[] arrInp = sc.nextLine().split(",");
@@ -32,7 +35,8 @@ public class MySolution_NextPermutation_LC31 {
 		getPermuatation("", sourceInp, nextPermutationList);
 
 		arrInp = organizePermutationList(nextPermutationList, Integer.parseInt(compareString));
-		// System.out.print(arrInp);
+		
+//		System.out.print(arrInp);
 		for (int i = 0; i < arrInp.length; i++) {
 			System.out.print(arrInp[i]);
 		}
