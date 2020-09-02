@@ -1,9 +1,9 @@
-package MaximalRectangle_LC85;
+package MaximalSquare_Rectangle;
 
 import java.util.Scanner;
 
-public class MySolution_DP_Soln_MaxRect_LC87 {
-	// could not solved with my personal concept so I used LeetCode Approach.
+public class LeetCode_DP_Soln_MaxRrectangleAreaIn2D_LC86 {
+
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int m = sc.nextInt();
@@ -36,18 +36,17 @@ public class MySolution_DP_Soln_MaxRect_LC87 {
 				if (matrix[i][j] == '1') {
 					dp[i][j] = j == 0 ? 1 : dp[i][j - 1] + 1;
 					int length = dp[i][j];
-
 					for (int k = i; k >= 0; k--) {
-						length = Math.min(length, dp[k][j]);
-						int width = i - k + 1;
+						length = Math.min(length, dp[k][j]); // horizontal
+						int width = i - k + 1; // vertical
 						maxArea = Math.max(maxArea, length * width);
 					}
 				}
 			}
 		}
-
 		return maxArea;
 	}
+
 }
 
 /*

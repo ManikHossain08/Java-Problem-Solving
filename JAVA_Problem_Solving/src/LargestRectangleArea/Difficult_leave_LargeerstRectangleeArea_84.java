@@ -4,7 +4,8 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class LargeerstRectangleeArea_84 {
+public class Difficult_leave_LargeerstRectangleeArea_84 {
+	// its very very difficult to understand so Leave it
 	public static void main(String args[]) {
 
 		Scanner sc = new Scanner(System.in);

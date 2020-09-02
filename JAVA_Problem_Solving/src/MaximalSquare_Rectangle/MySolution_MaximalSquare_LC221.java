@@ -1,9 +1,8 @@
-package MaximalRectangle_LC85;
+package MaximalSquare_Rectangle;
 
 import java.util.Scanner;
 
-public class LeetCode_DP_Soln_MaxRrectangleAreaIn2D_LC86 {
-
+public class MySolution_MaximalSquare_LC221 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int m = sc.nextInt();
@@ -19,11 +18,11 @@ public class LeetCode_DP_Soln_MaxRrectangleAreaIn2D_LC86 {
 			}
 		}
 
-		System.out.print(findRectangleArea2Ds(grid));
+		System.out.print(findSquareArea2Ds(grid));
 		sc.close();
 	}
 
-	private static int findRectangleArea2Ds(char[][] matrix) {
+	private static int findSquareArea2Ds(char[][] matrix) {
 		if (matrix == null || matrix.length == 0) {
 			return 0;
 		}
@@ -36,17 +35,20 @@ public class LeetCode_DP_Soln_MaxRrectangleAreaIn2D_LC86 {
 				if (matrix[i][j] == '1') {
 					dp[i][j] = j == 0 ? 1 : dp[i][j - 1] + 1;
 					int length = dp[i][j];
+
 					for (int k = i; k >= 0; k--) {
-						length = Math.min(length, dp[k][j]); // horizontal
-						int width = i - k + 1; // vertical
-						maxArea = Math.max(maxArea, length * width);
+						length = Math.min(length, dp[k][j]);
+						int width = i - k + 1;
+						if (width == length) {
+							maxArea = Math.max(maxArea, length * width);
+						}
 					}
 				}
 			}
 		}
+
 		return maxArea;
 	}
-
 }
 
 /*

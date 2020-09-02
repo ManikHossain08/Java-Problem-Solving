@@ -1,4 +1,4 @@
-package MaximalRectangle_LC85;
+package MaximalSquare_Rectangle;
 
 import java.util.Scanner;
 import java.util.Stack;
