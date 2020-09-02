@@ -14,15 +14,14 @@ public class FindingPathWIthMinimumCost_DFS {
 		for (int i = 0; i < numStations; i++) {
 			costa[i] = scan.nextLine().split(" ");
 		}
-		
 
 		for (int i = 0; i < numStations; i++) {
 			for (int j = 0; j < numStations; j++) {
 				cost[i][j] = Integer.parseInt(costa[i][j]);
 				// Another way, take direct scanner input and store in array.
-				//cost[i][j] = scan.nextInt();
+				// cost[i][j] = scan.nextInt();
 			}
-			//scan.nextLine(); // add this line too for this alternative option.
+			// scan.nextLine(); // add this line too for this alternative option.
 		}
 		System.out.print(obj.minCost(cost, numStations));
 		scan.close();
@@ -38,8 +37,7 @@ public class FindingPathWIthMinimumCost_DFS {
 		int min = cost[s][d];
 		for (int i = s + 1; i < d; i++) {
 			int c = minCostRec(cost, s, i) + minCostRec(cost, i, d);
-			if (c < min)
-				min = c;
+			min = Math.min(min, c);
 		}
 		return min;
 	}
