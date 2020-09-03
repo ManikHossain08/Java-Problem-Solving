@@ -1,11 +1,11 @@
-package CombinationSum;
+package DictionaryWord;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class CombinationSum_leetCode {
+public class MySolution_WordBreak_II_Two_LC140 {
 	// https://leetcode.com/problems/combination-sum/
 	
 	public static void main(String args[]) {
@@ -20,10 +20,11 @@ public class CombinationSum_leetCode {
 		System.out.print(findSumCOmbination(arrInp, target));
 		sc.close();
 	}
-	// Note: for using this first for loop is the the number should be repeat as much as many times.
+	
 	private static List<List<Integer>> findSumCOmbination(int[] candidates, int target) {
 		Arrays.sort(candidates);
 		List<List<Integer>> result = new ArrayList<>();
+		// Note: purpose of using this first for loop is the the number should be repeat as much as many times.
 		for (int i = 0; i < candidates.length; i++) {
 			combinationSumSorted(candidates, i, target - candidates[i], List.of(candidates[i]), result);
 		}

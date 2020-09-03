@@ -3,7 +3,7 @@ package FindVolumeOfWaterInGraph;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class MySolution_maxWaterVolume2 {
+public class MySolution_maxWaterVolume_LC42 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String[] inputs = sc.nextLine().split(",");

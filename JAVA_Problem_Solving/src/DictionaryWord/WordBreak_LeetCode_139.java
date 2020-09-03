@@ -1,10 +1,11 @@
 package DictionaryWord;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class WordBreak_Mine_140 {
+public class WordBreak_LeetCode_139 {
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
 		String str = sc.nextLine();
@@ -21,36 +22,41 @@ public class WordBreak_Mine_140 {
 	}
 
 	private static boolean isWordBreakable(String str, List<String> words) {
-		
+
 		if (words.size() == 0 || str.isEmpty())
 			return false;
 		if(words.contains(str) || words.isEmpty()) return true;
 		
-		int i = 0;
-		boolean isbreakable = false;
-		String strCopy = str, appendString = "";
-		if (words.size() == 0 || str.isEmpty())
-			return false;
-		if (words.contains(str) || words.isEmpty())
-			return true;
+		Collections.sort(words, (a, b) -> {
+			if (a.length() != b.length())
+				return a.length() - b.length();
+			return a.compareTo(b);
+		});
 
-		for (i = 1; i <= strCopy.length() && isbreakable == false; i++) {
-			String segmented = strCopy.substring(0, i);
-			if (words.contains(segmented)) {
-				appendString += segmented;
-				strCopy = strCopy.substring(i);
-				i = 0;
-				if (appendString.equals(str))
-					isbreakable = true;
-				else isbreakable = false;
+		int segmentNo = 0, i = 0;
+		String strCopy = str, appendString = "";
+		while (segmentNo <= words.size()) {
+			for (String word : words) {
+				segmentNo++;
+				if (strCopy.startsWith(word)) {
+					for (i = 0; i < word.length(); i++) {
+						if (strCopy.charAt(i) != word.charAt(i))
+							return false;
+					}
+					appendString += strCopy.substring(0, i);
+					strCopy = strCopy.substring(i);
+				}
 			}
 		}
-		return isbreakable;
+		if (appendString.equals(str))
+			return true;
+
+		return false;
 	}
 }
 
 /*
- * inputs :
+ * inputs : 
  * 
  * applepenapple - apple,pen --- true
  * 
