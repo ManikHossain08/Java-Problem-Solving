@@ -3,7 +3,7 @@ package Find_Min_String_Windows;
 import java.util.HashSet;
 import java.util.Scanner;
 
-public class MySolution_LongestSubstring_LC3 {
+public class OtherProblemSameConcept_LongestSubstring_LC3 {
 
 	// IMPORTANT NOTE: https://stackoverflow.com/questions/15505508/what-is-the-difference-between-string-substring-and-string-subsequence
 	// SUBSTRING AND SUBSEQUENCE IS NOT SAME

@@ -85,7 +85,8 @@ public class MySolution2_MinimumStringWindow_LC77 {
 		int flag = -1;
 		for (int i = 0; i < charLetters.size(); i++) {
 			char ch = charLetters.get(i);
-			if (originalLetter.get(ch) <= letterCount.get(ch))
+			if (originalLetter.get(ch) <= letterCount.get(ch)) // '<=' WAS MY CHALLENGING PART AND I SPEND 
+				// LOTS OF TIME FOR THIS BECAUSE I USED '==' OPERATORS SO MOST OF THE TIME IS SAYS FALSE
 				flag = 1;
 			else {
 				flag = -1;
