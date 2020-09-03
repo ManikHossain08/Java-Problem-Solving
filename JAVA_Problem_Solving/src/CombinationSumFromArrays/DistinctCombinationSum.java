@@ -1,4 +1,4 @@
-package CombinationSum;
+package CombinationSumFromArrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -36,7 +36,7 @@ public class DistinctCombinationSum {
 
 	public static void combinationSumHelper(int startIdx, int target, List<Integer> curr,
 			List<List<Integer>> res) {
-		
+		// if (target < 0) return; // this also work instead of 'Allcandidates[i] <= target'
 		if (target == 0) {
 			res.add(curr);
 			return;
