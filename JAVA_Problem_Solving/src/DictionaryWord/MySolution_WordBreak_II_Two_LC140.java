@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class MySolution_WordBreak_II_Two_LC140 {
-
+	// concept: https://leetcode.com/problems/word-break-ii/discuss/44191/Java-DP-solution
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
 		String orgtargetstr = sc.nextLine();

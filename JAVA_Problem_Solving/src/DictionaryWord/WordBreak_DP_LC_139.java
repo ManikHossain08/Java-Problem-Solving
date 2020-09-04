@@ -32,7 +32,8 @@ public class WordBreak_DP_LC_139 {
 	    T[0] = true;
 	    for (int i = 1; i <= s.length(); i++) {
 	        for (int j = 0; j < i; j++) {
-	            if(T[j] && set.contains(s.substring(j, i))) {
+	        	String substr = s.substring(j, i);
+	            if(T[j] && set.contains(substr)) {
 	                T[i] = true;
 	                break;
 	            }
@@ -52,5 +53,8 @@ public class WordBreak_DP_LC_139 {
  * catsandog - cats,dog,sand,and,cat --- false
  * 
  * aaaaaaaa - aaaa,aaa,aa ---- true
+ * 
+pineapplepenapple
+apple,pen,applepen,pine,pineapple
  * 
  */
