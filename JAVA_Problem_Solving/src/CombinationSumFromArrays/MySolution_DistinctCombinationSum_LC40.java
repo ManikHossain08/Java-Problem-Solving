@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class MySolution_DistinctCombinationSum {
+public class MySolution_DistinctCombinationSum_LC40 {
 	public static int [] Allcandidates;
 	public static int orgTarget;
 	public static List<List<Integer>> result = new ArrayList<List<Integer>>();

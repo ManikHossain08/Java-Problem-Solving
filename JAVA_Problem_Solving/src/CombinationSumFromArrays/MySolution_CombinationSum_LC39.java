@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class MySolution_CombinationSum_LC40 {
+public class MySolution_CombinationSum_LC39 {
 	
 	// https://leetcode.com/problems/combination-sum/
 	public static int [] arrInp;

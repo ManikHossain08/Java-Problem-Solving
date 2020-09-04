@@ -5,14 +5,13 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-public class DistinctCombinationSum {
-	public static int [] Allcandidates;
+public class DistinctCombinationSum_LC40 {
 	
 	public static void main(String args[]) {
 		Scanner scan = new Scanner(System.in);
 		int targetSum = scan.nextInt();
 		int numofElement = scan.nextInt();
-		Allcandidates = new int[numofElement];
+		 int[] Allcandidates = new int[numofElement];
 		for (int i = 0; i < numofElement; i++) {
 			Allcandidates[i] = scan.nextInt();
 		}
@@ -26,15 +25,15 @@ public class DistinctCombinationSum {
 	}
 
 	public static ArrayList<List<Integer>> combinationSum2(int[] candidates, int target) {
-		Arrays.sort(Allcandidates);
+		Arrays.sort(candidates);
 		ArrayList<List<Integer>> res = new ArrayList<List<Integer>>();
 		// no need to use loop here because do not want repetition of the same number again and again.
 		// like other problem in the same package from leetcode_39
-		combinationSumHelper(0, target, new ArrayList<Integer>(), res);
+		combinationSumHelper( candidates, 0, target, new ArrayList<Integer>(), res);
 		return res;
 	}
 
-	public static void combinationSumHelper(int startIdx, int target, List<Integer> curr,
+	public static void combinationSumHelper( int[] Allcandidates, int startIdx, int target, List<Integer> curr,
 			List<List<Integer>> res) {
 		// if (target < 0) return; // this also work instead of 'Allcandidates[i] <= target'
 		if (target == 0) {
@@ -47,7 +46,7 @@ public class DistinctCombinationSum {
 			
 			List<Integer> newCurr = new ArrayList<>(curr);
 			newCurr.add(Allcandidates[i]);
-			combinationSumHelper(i + 1, target - Allcandidates[i], newCurr, res);
+			combinationSumHelper(Allcandidates, i + 1, target - Allcandidates[i], newCurr, res);
 		}
 
 	}

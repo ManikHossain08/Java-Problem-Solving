@@ -5,7 +5,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class WordBreak_LeetCode_139 {
+public class WordBreak_I_One_NA_LeetCode_139 {
+	// Not Accepted: 32 / 43 test cases passed.
+	
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
 		String str = sc.nextLine();
