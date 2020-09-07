@@ -29,7 +29,7 @@ public class EditDistance {
 		}
 
 		int rows = word1.length() + 1, columns = word2.length() + 1;
-		int[][] dp = new int[rows][rows];
+		int[][] dp = new int[rows][columns];
 		
 		// Note: FIRST ROW AND FIRST COLUMN IS THE INITIALIZATION IN THIS GRID
 		// TO MAKE CALCULAITON. 
