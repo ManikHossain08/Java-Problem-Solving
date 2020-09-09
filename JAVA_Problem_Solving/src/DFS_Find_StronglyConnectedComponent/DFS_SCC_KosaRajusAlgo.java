@@ -24,7 +24,7 @@ public class DFS_SCC_KosaRajusAlgo {
 		}
 
 		List<List<Integer>> scc = k.getSCComponents(g);
-		for (List l : scc) {
+		for (List<Integer> l : scc) {
 			Collections.sort(l);
 			System.out.println(l);
 		}
@@ -35,18 +35,18 @@ public class DFS_SCC_KosaRajusAlgo {
 	public List<List<Integer>> getSCComponents(List<Integer>[] graph) {
 		int V = graph.length;
 		boolean[] visited = new boolean[V];
-		List<Integer> order = fillOrder(graph, visited);
+		List<Integer> stack = fillOrder(graph, visited);
 		// get transpose of the graph
 		List<Integer>[] reverseGraph = getTranspose(graph);
 		// clear visited array
 		visited = new boolean[V];
 		// reverse order or alternatively use a stack for order
-		Collections.reverse(order);
+		Collections.reverse(stack);
 		// get all scc
 		List<List<Integer>> sccList = new ArrayList<>();
-		for (int i = 0; i < order.size(); i++) {
+		for (int i = 0; i < stack.size(); i++) {
 			// if stack is used for order pop out elements
-			int v = order.get(i);
+			int v = stack.get(i);
 			if (!visited[v]) {
 				List<Integer> comp = new ArrayList<>();
 				DFS(reverseGraph, v, visited, comp);
@@ -63,7 +63,7 @@ public class DFS_SCC_KosaRajusAlgo {
 			if (!visited[i])
 				DFS(graph, i, visited, order);
 		return order;
-	}
+	}    
 
 	public void DFS(List<Integer>[] graph, int v, boolean[] visited, List<Integer> comp) {
 		visited[v] = true;
