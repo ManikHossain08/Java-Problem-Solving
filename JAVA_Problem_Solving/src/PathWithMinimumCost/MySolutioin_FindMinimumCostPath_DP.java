@@ -29,7 +29,7 @@ public class MySolutioin_FindMinimumCostPath_DP {
 		int minCostPath = mincost[0][mincost.length - 1];
 		
 		for (int i = 1; i < mincost.length; i++) {
-			for (int j = 1; j < mincost.length; j++) {
+			for (int j = i; j < mincost.length; j++) {
 
 				if (mincost[i][j] == 0) {
 					int initvalue = mincost[i][j - 1] == 1000 ? 0 : mincost[i][j - 1];
@@ -51,7 +51,7 @@ public class MySolutioin_FindMinimumCostPath_DP {
 
 }
 /*
-inputs:
+inputs: // sum already calculated
 5
 0 15 80 90 70
 1000 0 20 50 90
