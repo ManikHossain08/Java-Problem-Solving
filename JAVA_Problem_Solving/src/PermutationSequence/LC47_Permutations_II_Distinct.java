@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
-public class LC47_Permutations_II {
+public class LC47_Permutations_II_Distinct {
 	public static List<List<Integer>> result = new ArrayList<List<Integer>>();
 	public static Map<List<Integer>, List<Integer>> checkDuplicate = new HashMap<List<Integer>, List<Integer>>();
 
@@ -43,11 +43,11 @@ public class LC47_Permutations_II {
 			return result;
 		}
 		for (int index = 0; index < newArrangement.size(); index++) {
-
+			// this adding a number for generating result
 			List<Integer> newResultList = new ArrayList<Integer>(singleList);
 			int value = Integer.parseInt(newArrangement.get(index));
 			newResultList.add(value);
-
+			// this removing the same number to make zero
 			List<String> newNumbers = new ArrayList<String>(newArrangement);
 			newNumbers.remove(index);
 			getPermutationList(newResultList, newNumbers);
